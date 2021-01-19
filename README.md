@@ -1,7 +1,7 @@
 # py_profiler
 Simple python profiler decorator
 
-Usage examples:
+## Usage examples:
 ```python
 @profile(iterations=10000, runs=10, iter_results=False)
 def factorial_math(x):
@@ -47,4 +47,13 @@ factorial_gamma(13)
 factorial_reduce(13)
 factorial_cache(13)
 factorial_table(13)
+```
+
+## Output example:
+```
+[Profiling Average:factorial_math(13) = 6227020800] x10000 iters, x10 runs: 0.006301 ms
+[Profiling Average:factorial_gamma(13) = 6227020800.0] x10000 iters, x10 runs: 0.004852 ms
+[Profiling Average:factorial_reduce(13) = 6227020800] x10000 iters, x10 runs: 0.032857 ms
+[Profiling Average:factorial_cache(13) = 6227020800] x10000 iters, x10 runs: 0.002400 ms
+[Profiling Average:factorial_table(13) = 6227020800] x10000 iters, x10 runs: 0.003700 ms
 ```
